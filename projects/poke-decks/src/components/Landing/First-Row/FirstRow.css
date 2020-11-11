@@ -1,0 +1,113 @@
+.landing__header--first-row {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-bottom: 2px solid white;
+}
+
+.landing__header--bg-image:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.landing__header--bg-image {
+	position: absolute;
+	background-image: url('https://assets.pokemon.com/assets//cms2-es-es/img/trading-card-game/_tiles/tcgo/generic/tcgo-playmat-action-169-es.png');
+	height: 500px;
+	width: 100vw;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	transform: scale(1.1);
+	z-index: -999;
+}
+
+.landing__header--content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header--content__text {
+	width: 80%;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 25px 25px 25px 25px;
+	padding: 35px 30px;
+}
+
+.landing__header--description {
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	font-weight: 900;
+}
+
+.landing__header--logo {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.website-logo {
+	width: 85%;
+	max-width: 280px;
+}
+
+@media (max-width: 900px) {
+	.landing__header--first-row {
+		flex-direction: column-reverse;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding-bottom: 40px;
+		padding-top: 30px;
+	}
+	.landing__header--logo {
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 690px) {
+	.header--content__text {
+		width: 80%;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 506px) {
+	.landing__header--logo {
+		margin-top: 70px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 413px) {
+	.landing__header--logo {
+		margin-top: 90px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 343px) {
+	.landing__header--logo {
+		margin-top: 110px;
+		margin-bottom: 20px;
+	}
+}
