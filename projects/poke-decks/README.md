@@ -1,5 +1,5 @@
 # Deploy Link:
-https://team-rocket-06.herokuapp.com/
+https://pokedecks-tcg.web.app/
 
 
 # Getting Started with Create React App
