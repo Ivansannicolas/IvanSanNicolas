@@ -6,9 +6,8 @@ Here you can take a look of the actual features the app offers:
 
 ### Version 1.0.0
 
-This is the first stable version of Absalom. It's made with React-Native, and uses Redux for the data flow. The backend uses Express, which connects with a Mongodb database.
+This is the Absalom's first stable version. It's made with React-Native, and uses Redux for the data flow. The backend works with Express, which connects with a Mongodb database.
 
-```
 ● Login with your Google account using firebase.
 
 ● Create customizable characters with a basic description.
@@ -22,4 +21,3 @@ This is the first stable version of Absalom. It's made with React-Native, and us
 ● Edit your user information to tell other users what games you play, and languages do you speak to make new friends!
 
 ● Working on a search feature to find other users and interact with them.
-```
