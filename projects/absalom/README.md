@@ -14,10 +14,10 @@ This is the Absalom's first stable version. It's made with React-Native, and use
 
 ● Take a picture of your character sheet and upload it to have an easy check while you're playing with your friends! If you have your sheet in a pdf, try taking a screenshot. But don't worry, you'll be able to upload your pdf's soon!
 
-● Create categorys for your equipment and create customizable items with all the properties you want. Easy and useful!
+●   Create categorys for your equipment and create customizable items with all the properties you want. Easy and useful!
 
-● Try adding some notes to tell your characters history, the titles they got from their adventures or just write down those little details you don't want to forget.
+●   Try adding some notes to tell your characters history, the titles they got from their adventures or just write down those little details you don't want to forget.
 
-● Edit your user information to tell other users the games you play and the languages you speak to make new friends!
+●   Edit your user information to tell other users the games you play and the languages you speak to make new friends!
 
-● Working on a search feature to find other users and interact with them.
+●   Working on a search feature to find other users and interact with them.
