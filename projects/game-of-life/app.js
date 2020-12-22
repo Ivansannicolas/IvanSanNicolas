@@ -5,24 +5,26 @@ drawStars();
 var play = setInterval(step, velocity);
 
 function playStop() {
+
     isPaused = !isPaused;
     return isPaused;
 }
 
-function changeVelocity(isPaused, velocity, vel, play) {
+function changeVelocity(newVelocity) {
+    debugger;
     isPaused = !isPaused;
     clearInterval(play);
-    velocity = vel;
+    velocity = newVelocity;
     play = null;
     play = setInterval(step, velocity);
     isPaused = !isPaused;
     return velocity, play;
 }
 
-function changeSize(isPaused, size, scale, play) {
+function changeSize(newSize) {
     isPaused = !isPaused;
     clearInterval(play);
-    scale = size;
+    scale = newSize;
     play = setInterval(step, velocity);
     isPaused = !isPaused;
     return scale, play;
