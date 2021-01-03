@@ -17,9 +17,21 @@ export function loadCharactersSuccess(characters) {
 
 export function loadCharactersByOwner(ownerId) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/characters';
+    const endpoint = 'http://192.168.1.138:1240/characters';
     try {
       const { data } = await axios.get(endpoint, { params: { ownerId } });
+      dispatch(loadCharactersSuccess(data));
+    } catch (error) {
+      dispatch(loadError(error));
+    }
+  };
+}
+
+export function loadCharactersByField(searchValue, typeValue) {
+  return async (dispatch) => {
+    const endpoint = 'http://192.168.1.138:1240/characters/filter';
+    try {
+      const { data } = await axios.get(endpoint, { searchValue, typeValue });
       dispatch(loadCharactersSuccess(data));
     } catch (error) {
       dispatch(loadError(error));

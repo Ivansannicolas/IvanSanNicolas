@@ -1,7 +1,7 @@
 function charactersByFilterController(Character) {
   function getMethod(req, res) {
     const { filter, filterValue } = req.query;
-    const query = { [filter]: filterValue };
+    const query = { [filter]: { $regex: `.*${filterValue}.*` } };
     const findCharactersCallback = (error, payload) => {
       error ? res.send(error) : res.json(payload);
     };

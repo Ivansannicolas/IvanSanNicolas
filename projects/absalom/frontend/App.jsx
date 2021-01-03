@@ -17,6 +17,7 @@ import UserDetail from './src/components/UserDetail/UserDetail';
 import CharacterSheet from './src/components/CharacterSheet/CharacterSheet';
 import SearchList from './src/components/SearchList/SearchList';
 import LoginScreen from './src/components/LoginScreen/LoginScreen';
+import DiceThrower from './src/components/DiceThrower/DiceThrower';
 
 const store = configureStore({
   charactersReducer: { characterItem: {}, characterId: '', charactersArray: [] },
@@ -68,6 +69,7 @@ export default function App() {
             <Stack.Screen name="CharacterSheet" component={CharacterSheet} />
             <Stack.Screen name="SearchList" component={SearchList} />
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
+            <Stack.Screen name="DiceThrower" component={DiceThrower} />
           </Stack.Navigator>
           <StatusBar style={statusBarStyle.lightContent} />
         </View>

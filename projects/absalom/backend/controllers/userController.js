@@ -31,6 +31,7 @@ function userController(User) {
   }
 
   async function postMethod(req, res) {
+    console.log(req);
     try {
       const user = req.body;
       const query = { email: user.email };

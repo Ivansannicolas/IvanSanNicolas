@@ -7,12 +7,6 @@ describe('usersController getMethod', () => {
       json: jest.fn(),
     };
 
-    const req = {
-      query: {
-        userName: '',
-      },
-    };
-
     User.find = jest.fn().mockReturnValue({
       populate: jest.fn().mockReturnValue({
         exec: jest.fn().mockImplementationOnce((callback) => {
@@ -21,7 +15,7 @@ describe('usersController getMethod', () => {
       }),
     });
 
-    usersController.getMethod(req, res);
+    usersController.getMethod(null, res);
 
     expect(res.json).toHaveBeenCalled();
   });
@@ -29,11 +23,6 @@ describe('usersController getMethod', () => {
   test('should call res.send when there is an error in getMethod', () => {
     const res = {
       send: jest.fn(),
-    };
-    const req = {
-      query: {
-        userName: '',
-      },
     };
 
     User.find = jest.fn().mockReturnValue({
@@ -44,7 +33,7 @@ describe('usersController getMethod', () => {
       }),
     });
 
-    usersController.getMethod(req, res);
+    usersController.getMethod(null, res);
 
     expect(res.send).toHaveBeenCalled();
   });

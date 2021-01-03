@@ -31,13 +31,6 @@ const styles = StyleSheet.create({
     height: 30,
     marginBottom: 5,
   },
-  absalom__title: {
-    fontSize: 24,
-    color: 'white',
-    fontWeight: 'bold',
-    letterSpacing: 5,
-    marginLeft: 15,
-  },
 });
 
 export default styles;

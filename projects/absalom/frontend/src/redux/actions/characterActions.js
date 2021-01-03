@@ -1,7 +1,7 @@
 import axios from 'axios';
 import actionTypes from './ActionTypes';
 
-// homeIp: 'http://192.168.1.129:1240'
+// homeIp: 'http://192.168.1.138:1240'
 // skylabIp: 'http://192.168.0.61:1240'
 // MobileIp: 'http://192.168.43.40:1240'
 
@@ -21,7 +21,7 @@ export function loadError(error) {
 
 export function loadCharacter(characterId) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/character';
+    const endpoint = 'http://192.168.1.138:1240/character';
     try {
       const { data } = await axios.get(endpoint, { params: { characterId } });
       dispatch(loadCharacterSuccess(data));
@@ -33,7 +33,7 @@ export function loadCharacter(characterId) {
 
 export function loadCharacterByKey(characterUniqueKey, userId) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/character/getByKey';
+    const endpoint = 'http://192.168.1.138:1240/character/getByKey';
     try {
       const { data } = await axios.get(endpoint, { params: { characterUniqueKey, userId } });
       dispatch(loadCharacterSuccess(data));
@@ -52,7 +52,7 @@ export function setCharacterId(characterId) {
 
 export function updateCharacter(characterId, updatedCharacter) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/character';
+    const endpoint = 'http://192.168.1.138:1240/character';
     try {
       await axios.patch(endpoint, { characterId, updatedCharacter });
       dispatch(loadCharacter(characterId));
@@ -64,7 +64,7 @@ export function updateCharacter(characterId, updatedCharacter) {
 
 export function deleteCharacter(characterId) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/character';
+    const endpoint = 'http://192.168.1.138:1240/character';
     try {
       await axios.delete(endpoint, { params: characterId });
     } catch (error) {
@@ -75,7 +75,7 @@ export function deleteCharacter(characterId) {
 
 export function createCharacter(newCharacter) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/character';
+    const endpoint = 'http://192.168.1.138:1240/character';
     try {
       await axios.post(endpoint, { newCharacter });
     } catch (error) {

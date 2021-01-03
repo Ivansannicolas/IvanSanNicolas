@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { loadCharactersByOwner } from '../../redux/actions/charactersActions';
 import styles from './HeaderStyles';
@@ -27,7 +27,7 @@ function Header({ navigation, userId, dispatch }) {
             navigation.navigate('CharacterList');
           }}
         >
-          <Text style={styles.absalom__title}>ABSALOM</Text>
+          <Image source={absalomIcon} style={styles.navigationIcon} />
         </TouchableOpacity>
         <View style={styles.button}>
           <View style={styles.navigationIcon} />

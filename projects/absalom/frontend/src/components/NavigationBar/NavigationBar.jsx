@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { loadCharactersByOwner } from '../../redux/actions/charactersActions';
+import { loadCharactersByOwner, loadCharactersSuccess } from '../../redux/actions/charactersActions';
 import styles from './NavigationBarStyles';
 import absalomIcon from '../../images/absalom-icon.png';
 import SearchIcon from '../../images/search-icon.png';
@@ -14,6 +14,11 @@ function NavigationBar({ navigation, userId, dispatch }) {
       <View style={styles.buttons}>
         <TouchableOpacity
           style={styles.button}
+          onPress={() => {
+            dispatch(loadCharactersSuccess([]));
+            dispatch(loadCharactersByOwner(userId));
+            navigation.navigate('SearchList');
+          }}
         >
           <Image source={SearchIcon} style={styles.navigationIcon} />
         </TouchableOpacity>
@@ -28,6 +33,10 @@ function NavigationBar({ navigation, userId, dispatch }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
+          onPress={() => {
+            dispatch(loadCharactersByOwner(userId));
+            navigation.navigate('DiceThrower');
+          }}
         >
           <Image source={DiceIcon} style={styles.navigationIcon} />
         </TouchableOpacity>

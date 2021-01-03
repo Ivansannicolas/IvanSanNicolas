@@ -21,7 +21,7 @@ export function loadUserSuccess(user) {
 
 export function loadUser(userId) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/user';
+    const endpoint = 'http://192.168.1.138:1240/user';
     try {
       const { data } = await axios.get(endpoint, { params: { userId } });
       dispatch(loadUserSuccess(data));
@@ -40,7 +40,7 @@ export function setUserId(userId) {
 
 export function updateUser(userId, updatedUser) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/user';
+    const endpoint = 'http://192.168.1.138:1240/user';
     try {
       const { data } = await axios.patch(endpoint, { userId, updatedUser });
       dispatch(loadUserSuccess(data));
@@ -52,7 +52,7 @@ export function updateUser(userId, updatedUser) {
 
 export function deleteUser(userId) {
   return async (dispatch) => {
-    const endpoint = 'http://192.168.1.129:1240/user';
+    const endpoint = 'http://192.168.1.138:1240/user';
     try {
       await axios.delete(endpoint, { params: userId });
     } catch (error) {
@@ -77,7 +77,7 @@ async function signInWithGoogle() {
 export function loginGoogle() {
   return async (dispatch) => {
     try {
-      const endpoint = 'http://192.168.1.129:1240/user';
+      const endpoint = 'http://192.168.1.138:1240/user';
       const { user } = await signInWithGoogle();
       const { data } = await axios.post(endpoint, user);
       dispatch(loadUserSuccess(data));

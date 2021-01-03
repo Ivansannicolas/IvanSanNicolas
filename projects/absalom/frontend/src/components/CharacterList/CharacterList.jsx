@@ -12,6 +12,7 @@ import { loadCharactersByOwner } from '../../redux/actions/charactersActions';
 import { displayAddCharacterModal, addNewCharacter, newCharacterModel } from './CharacterListFunctions';
 import Header from '../Header/Header';
 import NavigationBar from '../NavigationBar/NavigationBar';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import styles from './CharacterListStyles';
 import absalomBackground from '../../images/absalom-background.png';
 import addIcon from '../../images/add-icon-blue.png';

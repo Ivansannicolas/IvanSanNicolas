@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    marginTop: 0,
   },
   characterList: {
     display: 'flex',
@@ -14,6 +15,53 @@ const styles = StyleSheet.create({
     width: '100%',
     marginTop: '5%',
     marginBottom: '5%',
+  },
+  characterList__searchBar__block: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 20,
+  },
+  searchList__searchBar: {
+    width: '80%',
+    height: 60,
+    textAlign: 'center',
+    borderWidth: 1,
+    borderRadius: 40,
+    fontSize: 20,
+    backgroundColor: 'white',
+  },
+  searchList__searchBar__input__container: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    borderColor: '#dddd',
+  },
+  searchList__searchBar__input: {
+    backgroundColor: 'white',
+    borderColor: '#dddd',
+  },
+  searchList__checkbox__container: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    width: '90%',
+    marginTop: '5%',
+    padding: 5,
+    backgroundColor: 'white',
+    borderRadius: 10,
+  },
+  searchList__checkbox__box: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: 10,
+    backgroundColor: 'white',
+  },
+  characterList__title__block: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    marginTop: 20,
   },
   characterList__title: {
     width: '100%',
