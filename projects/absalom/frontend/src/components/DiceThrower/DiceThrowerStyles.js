@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.60,
+    shadowOpacity: 0.6,
     shadowRadius: 4.65,
   },
   diceThrower__title__text: {
@@ -41,8 +41,38 @@ const styles = StyleSheet.create({
       width: 2,
       height: 6,
     },
-    shadowOpacity: 0.50,
+    shadowOpacity: 0.5,
     shadowRadius: 4.65,
+  },
+  diceThrower__container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
+  diceThrower__resultScreen: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    width: '90%',
+    padding: 10,
+    paddingRight: 20,
+    paddingLeft: 20,
+    backgroundColor: '#224864',
+    borderRadius: 18,
+  },
+  diceThrower__resultScreen__text: {
+    color: 'white',
+    fontSize: 24,
+    fontWeight: '600',
+  },
+  eraseArrow__container: {
+
+  },
+  eraseArrow__icon: {
+    width: 50,
+    height: 50,
   },
 });
 
