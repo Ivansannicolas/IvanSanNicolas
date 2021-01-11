@@ -25,5 +25,5 @@ app.use('/projects', projectsRouter);
 app.use('/project', projectRouter);
 
 app.listen(port, () => {
-  console.log(`Server working at port ${port}`);
+  console.log(`Server is working at port ${port}`);
 });
